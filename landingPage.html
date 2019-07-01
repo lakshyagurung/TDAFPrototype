@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Account Summary</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<link rel="stylesheet" type="text/css" href="css/tdcustom.css">
+	<link rel="stylesheet" type="text/css" href="css/chat.css">
+	<style type="text/css">
+	.td-nav-primary .td-quick-access>ul>li>a{
+		max-width: 28px;
+	}
+	.tdcustom-alerts{
+		color: #fff;
+		margin-top: 7px;
+	}
+	.tdcustom-alerts a{
+		color: #fff;
+	}
+	#aBanner1{
+		background: url('img/accountback.jpg');
+		height:300px;
+		opacity: 1;
+	}
+	#tdid-dropdown-content{
+		display: none;
+	}
+	#tdid-dropdown-content-second{
+		display: none;
+	}
+	#listClassAddSecond>a:focus{
+		outline: none;
+	}
+	.td-nav-primary .td-quick-access .login .td-dropdown-content {
+		width: 170px;
+		min-width: 90px;
+	}
+	.td-nav-primary ul>li.td-us-public-login+li.email{
+		margin-left: 20px;
+	}
+	table{
+		width: 99%;
+	}
+	table>thead>tr{
+		height: 60px;
+	}
+	table>thead>tr>th{
+		padding-left: 20px;
+	}
+	table>tbody>tr{
+		border: 1px solid #ccc;
+		height: 70px;
+		background: #fff;
+	}
+	table>tbody>tr>td{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	#tdaf-myBtn{
+		display: none;
+		position: fixed;
+		bottom: 20px;
+		right: 110px;
+	}
+	.tdcustom-chat{
+		position: fixed;
+		bottom: 20px;
+		right: 30px;
+		padding: 5px;
+		background: #008a00; 
+		border-radius: 50%;
+	}
+</style>
+<script
+src="https://code.jquery.com/jquery-3.4.1.js"
+integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+crossorigin="anonymous"></script>
+<script>
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+		if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+			document.getElementById("tdaf-myBtn").style.display = "block";
+		} else {
+			document.getElementById("tdaf-myBtn").style.display = "none";
+		}
+	}
+	function topFunction(element, to, duration) {
+		if (duration < 0) return;
+		var difference = to - element.scrollTop;
+		var perTick = difference / duration * 10;
+
+		setTimeout(function() {
+			element.scrollTop = element.scrollTop + perTick;
+			topFunction(element, to, duration - 10);
+		}, 10);
+	}
+
+	function closealert(){
+		document.getElementById('alerts').style.display = "none";
+	}
+	
+</script>
+<script>
+	function dropdown() {
+		var drophoverclass = document.getElementById("listClassAdd").classList;
+		if (drophoverclass.contains("td-dropdown-active")) {
+			drophoverclass.remove("td-dropdown-active");
+			document.getElementById("tdid-dropdown-content").style.display="none";
+		} else {
+			drophoverclass.add("td-dropdown-active");
+			document.getElementById("tdid-dropdown-content").style.display="block";
+		}
+	}
+	function dropdownSecond() {
+		var drophoverclass = document.getElementById("listClassAddSecond").classList;
+		if (drophoverclass.contains("td-dropdown-active")) {
+			drophoverclass.remove("td-dropdown-active");
+			document.getElementById("tdid-dropdown-content-second").style.display="none";
+		} else {
+			drophoverclass.add("td-dropdown-active");
+			document.getElementById("tdid-dropdown-content-second").style.display="block";
+		}
+	}
+	function hide1st(){
+		var caret1 = document.getElementById("caret1st");
+		var expandDiv1 = document.getElementById("1stexpand");
+		var paybutton1 = document.getElementById("disapearButton1");
+		var rowcolor1 = document.getElementById("table-rowBackground1");
+		var caret2 = document.getElementById("caret2nd");
+		var expandDiv2 = document.getElementById("2ndExpand");
+		var paybutton2 = document.getElementById("disapearButton2");
+		var rowcolor2 = document.getElementById("table-rowBackground2");
+		if (expandDiv1.style.display==="none") {
+			if (expandDiv2.style.display==="table-row") {
+				caret1.className="td-icon td-icon-downCaret";
+				paybutton1.style.display="none";
+				expandDiv1.style.display="table-row";
+				rowcolor1.style.background = "#f3f3f8";
+				caret2.className="td-icon td-icon-rightCaret";
+				paybutton2.style.display="block";
+				expandDiv2.style.display="none";
+				rowcolor2.style.background = "#ffffff";
+			} else {
+				caret1.className="td-icon td-icon-downCaret";
+				paybutton1.style.display="none";
+				expandDiv1.style.display="table-row";
+				rowcolor1.style.background = "#f3f3f8";
+				caret2.className="td-icon td-icon-rightCaret";
+				paybutton2.style.display="block";
+				expandDiv2.style.display="none";
+				rowcolor2.style.background = "#ffffff";
+			}
+		}else{
+			if (expandDiv2.style.display==="none") {
+				caret1.className="td-icon td-icon-rightCaret";
+				paybutton1.style.display="block";
+				expandDiv1.style.display="none";
+				rowcolor1.style.background = "#ffffff";
+				caret2.className="td-icon td-icon-rightCaret";
+				paybutton2.style.display="block";
+				expandDiv2.style.display="none";
+				rowcolor2.style.background = "#ffffff";
+			}
+		}
+	}
+	function hide2nd(){
+		var caret1 = document.getElementById("caret1st");
+		var expandDiv1 = document.getElementById("1stexpand");
+		var paybutton1 = document.getElementById("disapearButton1");
+		var rowcolor1 = document.getElementById("table-rowBackground1");
+		var caret2 = document.getElementById("caret2nd");
+		var expandDiv2 = document.getElementById("2ndExpand");
+		var paybutton2 = document.getElementById("disapearButton2");
+		var rowcolor2 = document.getElementById("table-rowBackground2");
+		if (expandDiv2.style.display==="none") {
+			if (expandDiv1.style.display==="table-row") {
+				caret1.className="td-icon td-icon-rightCaret";
+				paybutton1.style.display="block";
+				expandDiv1.style.display="none";
+				rowcolor1.style.background = "#ffffff";
+				caret2.className="td-icon td-icon-downCaret";
+				paybutton2.style.display="none";
+				expandDiv2.style.display="table-row";
+				rowcolor2.style.background = "#f3f3f8";
+			} else {
+				caret1.className="td-icon td-icon-rightCaret";
+				paybutton1.style.display="block";
+				expandDiv1.style.display="none";
+				rowcolor1.style.background = "#ffffff";
+				caret2.className="td-icon td-icon-downCaret";
+				paybutton2.style.display="none";
+				expandDiv2.style.display="table-row";
+				rowcolor2.style.background = "#f3f3f8";
+			}
+		}else{
+			if(expandDiv1.style.display==="none"){
+				caret1.className="td-icon td-icon-rightCaret";
+				paybutton1.style.display="block";
+				expandDiv1.style.display="none";
+				rowcolor1.style.background = "#ffffff";
+				caret2.className="td-icon td-icon-rightCaret";
+				paybutton2.style.display="block";
+				expandDiv2.style.display="none";
+				rowcolor2.style.background = "#ffffff";
+			}
+			
+		}
+	}
+</script>
+<script>
+	function closeChatbox(){
+		document.getElementById('chatBox').style.display="none";
+	}
+	function toggleChatBox(){
+		var chatbox = document.getElementById('chatBox');
+		if (chatbox.style.display === "none") {
+			chatbox.style.display = "block";
+		} else {
+			chatbox.style.display ="none";
+		}
+	}
+</script>
+</head>
+<body>
+	<div class="td_rq_header-nav td-header-nav">
+		<header class="td-header-desktop">
+			<div class="td-utility-toggle">
+				<div class="td-container">
+					<div class="td-section-left">
+						
+						<div class="tdcustom-alerts" id="alerts">
+							<a href="">
+								<span class="td-icon td-icon-warning" style="margin-right: 10px;"></span>
+								ALERT: If you live in an affected area by bad weather, click here to visit our disaster relief center.
+							</a>
+							
+							<span class="td-icon td-icon-close" style="margin-left: 270px; cursor:pointer; " onclick="closealert()"></span>
+						</div>
+
+					</div>
+					<div class="td-section-right">
+						<div class="td-other-toggles">
+							<ul>
+								<li class="td-dropdown td-dropdown-country td-dropdown-no-hover" id="listClassAdd" onclick="dropdown()"> <!-- td-dropdown-active -->
+									<a href="javascript:void(0);" id="tddropdown-link">
+										<span class="td-forscreenreader">Select country</span>
+										<img class="country-flag" src="img/usaicon.png" alt="">
+										<span class="td-icon expand" aria-hidden="true"></span><span class="td-icon collapse"></span>
+									</a>
+									<ul class="td-dropdown-content" id="tdid-dropdown-content">
+										<li>
+											<a href=""><img class="country-flag" src="img/canadaicon.png" alt="">Canada</a>
+										</li>
+
+										<li class="active">
+											<a href="javascript:void(0);">
+												<img class="country-flag" src="img/usaicon.png" alt="">US
+												<span class="td-icon selected">
+													
+												</span>
+												<span class="td-forscreenreader">Selected</span>
+											</a>
+										</li>
+
+									</ul>
+								</li>
+
+								<li class="td-dropdown td-dropdown-language td-dropdown-no-hover">
+
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="td-nav-primary">
+				<div class="td-container">
+					<div class="td-section-left">
+						<div class="td-logo">
+							<a href="">
+								<img src="img/TDAFLOGO.png">
+							</a>
+						</div>
+						<nav>
+							<ul>
+								<li>
+									<a href="">
+										Account Dashboard
+									</a>
+								</li>
+								<li>
+									<a href="">
+										Pay my bill
+									</a>
+								</li>
+								<li>
+									<a href="">
+										Shop online
+									</a>
+								</li>
+								<li>
+								</ul>
+							</nav>
+						</div>
+						<div class="td-section-right">
+							<div class="td-quick-access">
+								<ul>
+									<li class="find-us">
+										<a href="">
+											<span class="td-icon"></span>
+											<span class="td-label">Find a dealer</span>
+										</a>
+									</li>
+									<li class="help">
+										<a href="">
+											<span class="td-icon"></span>
+											<span class="td-label">Help</span>
+										</a>
+									</li>
+									<li class="divider">
+										<div class="td-divider-line">
+											
+										</div>
+									</li>
+									<li class="login td-us-public-login td-dropdown" id="listClassAddSecond" onclick="dropdownSecond()">
+										<a href="javascript:void(0);" class="td-show-label">
+											<span class="td-icon"></span>
+											<span class="td-label">Sarah Doe</span>
+											<span class="td-icon expand" aria-hidden="true"></span>
+											<span class="td-icon collapse" aria-hidden="true"></span>
+										</a>
+										<ul class="td-dropdown-content" id="tdid-dropdown-content-second">
+											<li>
+												<a href="">User Profile</a>
+											</li>
+
+											<li class="active">
+												<a href="">Logout</a>
+											</li>
+										</ul>
+									</li>
+									<li class="email">
+										<a href="#" class="td-show-label">
+											<span class="td-icon td-icon-email"></span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+
+		</div>
+		<div class="td_rq_tooltip">
+			<div class="td_rq_popover td-contentarea" role="main" id="main" style="padding-top: 106px;" tabindex="-1">
+				<div class="a-login-banner">
+					<div id="Ad-A">
+						<section class="td_rq_a_banner td-a-banner loginbox"  id="aBanner1" style="margin-bottom:0px;">
+							<div class="td-container">
+								<div class="td-col td-col-xs-12 td-col-xs-offset-0 td-col-sm-7 td-col-sm-offset-5 td-col-md-8 td-col-md-offset-4">
+									<div class="td-row td-a-banner-callout parallax-banner background-color-white">
+										<div id="login-body-content" class="td-col-sm-12 td-col-md-6">
+											<p class="td-banner-header gray"></p>
+											<div class="td-row callout-action">
+												
+											</div>   
+										</div>   
+										<div class="hidden-xs hidden-sm td-col-md-6 td-col-md-offset-0 td-col-lg-5 td-col-lg-offset-1"></div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div class="a-login-banner-loginbox" style="opacity: 1;">
+						<section class="">
+							<div class="td-container">
+								<div class="td-row">
+									<h1 class="black" style="font-weight: bold; margin-bottom: 0; margin-top: 50px;">Good afternoon, SARAH DOE</h1>
+									<strong>Tuesday, July 20, 2019</strong> | Last accesses: Jun 21, 2019 4:30 PM ET
+
+								</div>
+							</div>
+						</section>
+					</div>
+					<section class="tdcustom-table">
+						<div class="td-container">
+							<div class="table-responsive" style="margin-top: -130px;">
+								<table>
+									<thead>
+										<tr>
+											<th scope="col" style="font-size: 22px">Vehicle</th>
+											<th scope="col">Account Number</th>
+											<th scope="col">Current balance</th>
+											<th scope="col">Amount due</th>
+											<th scope="col">Payment Due date</th>
+											<th scope="col" style="width: 190px;"></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr id="table-rowBackground1">
+											<td onclick="hide1st()" style="cursor: pointer;">2015 FORD ESCAPE 4WD <span class="td-icon td-icon-rightCaret" id="caret1st"></span></td>
+											<td>1100774052</td>
+											<td>$500.50</td>
+											<td>$500.50</td>
+											<td>12/15/18</td>
+											<td><button class="btn btn-block td-button-secondary" style="font-size: 14px; display: block;" id="disapearButton1">Pay Now</button></td>
+										</tr>
+										<tr id="1stexpand" style="display: none;">
+											<td style="padding-bottom: 10px;">
+												<p class="td-legal-copy"><strong>Vehicle VIN: </strong>FUA07336</p>
+												<p class="td-legal-copy"><strong>APR: </strong>3.99%</p>
+												<p class="td-legal-copy"><strong>Contract Date: </strong>20th July 2019</p>
+												<p class="td-legal-copy"><strong>Maturity Date: </strong>20th July 2019</p>
+												<p class="td-legal-copy"><strong>Last payment receive date: </strong>20th July 2019</p>
+												<button class="btn btn-block td-button-secondary" style="font-size: 14px;width: 200px;">Pay Now</button>
+											</td>
+											<td colspan="5">
+												<div style="margin-top: -60px;">
+													<a href="" class="td-link-action" style="line-height: 30px;">Account History</a><br>
+													<a href="" class="td-link-action" style="line-height: 30px;">Payoff Quote</a><br>
+													<a href="" class="td-link-action" style="line-height: 30px;">View Statements</a><br>
+													<a href="" class="td-link-action" style="line-height: 30px;">Change my Due Date</a><br>
+													<a href="" class="td-link-action" style="line-height: 30px;">Request an extension</a><br>
+												</div>
+											</td>
+										</tr>
+										<tr style="background: #f3f3f8;" id="table-rowBackground2">
+											<td onclick="hide2nd()" style="cursor: pointer;">2013 DODGE GRAND CARA <span class="td-icon td-icon-downCaret" id="caret2nd"></span></td>
+											<td>1101302067</td>
+											<td>$634.90</td>
+											<td>$634.90</td>
+											<td>12/15/18</td>
+											<td><button class="btn btn-block td-button-primary disabled" style="background:#c55415; color: #fff;opacity: 0.8;font-size: 14px; display: none;" id="disapearButton2">Payment Pending ...</button></td>
+										</tr>
+										<tr id="2ndExpand" style="display: table-row;">
+											<td  style="padding-bottom: 10px;">
+												<p class="td-legal-copy"><strong>Vehicle VIN: </strong>DR757087</p>
+												<p class="td-legal-copy"><strong>APR: </strong>2.05%</p>
+												<p class="td-legal-copy"><strong>Contract Date: </strong>20th July 2019</p>
+												<p class="td-legal-copy"><strong>Maturity Date: </strong>20th July 2019</p>
+												<p class="td-legal-copy"><strong>Last payment receive date: </strong>20th July 2019</p>
+												<button class="btn btn-block td-button-primary disabled" style="background:#c55415; color: #fff;opacity: 0.8;font-size: 14px;width: 200px;" id="disapearButton1">Payment Pending ...</button>
+											</td>
+											<td colspan="5">
+												<div style="margin-top: -60px;">
+													<a href="" class="td-link-action" style="line-height: 30px;">Account History</a><br>
+													<a href="" class="td-link-action" style="line-height: 30px;">Payoff Quote</a><br>
+													<a href="" class="td-link-action" style="line-height: 30px;">View Statements</a><br>
+													<a href="" class="td-link-action" style="line-height: 30px;">Change my Due Date</a><br>
+													<a href="" class="td-link-action" style="line-height: 30px;">Request an extension</a><br>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</section>
+					
+					<section class="td-main-header" style="margin-top: 30px;">
+						<div class="td-container">
+							<div>
+								<a href="" class="td-link-action">Add/Remove an auto loan</a><br><br>
+								<a href="" class="td-link-action">Edit my profile</a><br><br>
+								<a href="" class="td-link-action">Enroll in Auto Pay</a><br><br>
+								<a href="" class="td-link-action">Enroll in Paperless Statement</a>
+							</div>
+
+						</div>
+					</section>
+					<section style="margin-top: 40px;">
+						<div class="td-container">
+							<div class="td-row" style="background: #f3f3f8;">
+								<div class="td-col-md-5" style="padding-left: 0;">
+									<img src="img/autopay.jpg" alt="" style="width: 100%;">
+								</div>
+								<div class="td-col-md-7">
+									<p style="line-height: 30px; font-size: 18px;">Enroll today for Automatic Payment. It's an easy, hassle-free way of making your monthly vehicle payments. Each month, your payment is automatically deducted on your due date, from the checking or saving account you specify. once enrolled you will never have to worry about lost checks/drafts or late fees!</p>
+									<button class="btn btn-block td-button-primary" style="font-size: 14px;width: 200px;">Apply Now</button>
+								</div>
+							</div>
+						</div>
+					</section>
+					<div class="tdcustom-container clearfix" style="display: none;" id="chatBox">
+
+						<div class="chat">
+							<div class="chat-header clearfix">
+								<img src="img/oldguy.png" alt="avatar" style="width: 50px;">
+
+								<div class="chat-about">
+									<div class="chat-with">John Meyers</div>
+									<div class="chat-num-messages">Account Manager</div>
+								</div>
+								<span class="td-icon td-icon-close" style="float: right;color: #434651;font-size: 20px;margin-top: 12px;cursor: pointer;" onclick="closeChatbox()"></span>
+							</div>
+
+							<div class="chat-history">
+								<ul>
+									<li>
+										<div class="message-data">
+											<span class="message-data-name"> John</span>
+											<span class="message-data-time">10:12 AM, Today</span>
+										</div>
+										<div class="message my-message">
+											Hi Alison, how can I help you?
+										</div>
+									</li>
+									<li class="clearfix">
+										<div class="message-data align-right">
+											<span class="message-data-time">10:13 AM, Today</span> &nbsp; &nbsp;
+											<span class="message-data-name" >Me</span>
+
+										</div>
+										<div class="message other-message float-right">
+											Hi John, I have a question regarding my account. Do you have time for a call?
+										</div>
+									</li>
+								</ul>
+
+							</div>
+
+							<div class="chat-message clearfix">
+								<textarea name="message-to-send" id="message-to-send" placeholder ="Type your message" rows="1"></textarea>
+
+								<span class="td-icon td-icon-FileAClaim" style="font-size: 30px;color: gray;cursor: pointer;"></span>
+								<span class="td-icon td-icon-youthAccount" style="font-size: 30px;color: gray;cursor: pointer;"></span></i>
+
+								<button class="btn btn-block td-button-primary" style="font-size: 14px;float: right;width: 100px;">SEND</button>
+
+							</div>
+
+						</div>
+
+					</div>
+
+
+					<div class="tdcustom-chat">
+						<a href="javascript:void(0);" class="" tabindex="0"  onclick="toggleChatBox()" style="outline: none;">
+							<span class="td-icon td-icon-whatsNew" style="font-size: 60px; color: #fff;">
+
+							</span>
+						</a>
+					</div>
+					
+					<a href="javascript:void(0);" class="td_rq_link-to-top activate" tabindex="0" onclick="topFunction(document.documentElement, 0, 200)" id="tdaf-myBtn">
+						<span class="left">
+							<span class="td-forscreenreader">back to top</span>
+							<span class="td-icon td-icon-upCaret td-copy-green icon-small" tabindex="-1">
+							</span>
+							<span class="text" aria-hidden="true" tabindex="-1">Top</span>
+						</span>
+						<span class="right" aria-hidden="true"></span>
+					</a>
+					<footer role="contentinfo" class="td-fullwidth-dark-green td-padding-vert-0">
+						<div class="td-container">
+							<div class="td-row">
+								<div class="td-footer-content td-col-xs-12 td-footer-no-background-img">
+									<p class="td-footer-heading td-copy-white td-copy-align-centre">
+										Need to talk to us directly?
+										<a href="" class="td-contact-link td-link-nounderline td-link-standalone">
+											Contact 
+											<span class="td-link-lastword">
+												us
+												<span class="td-icon td-icon-rightCaret" aria-hidden="true"></span>
+											</span>
+										</a>
+									</p>
+									<div class="td-footer-social td-copy-align-centre">
+										<p class="td-footer-social-heading">Call now 1-800-556-8172</p>
+									</div>
+									<div class="td-footer-links td-copy-align-centre td-copy-white">
+										<a class="td-copy-white td-link-nounderline td-copy-standard" href="" style="margin-right: 30px;">Privacy</a>
+										<a class="td-copy-white td-link-nounderline td-copy-standard" href="" style="margin-right: 30px;">Terms of Use</a>
+										<a class="td-copy-white td-link-nounderline td-copy-standard" href="" style="margin-right: 30px;">Accessibility</a>
+										<a class="td-copy-white td-link-nounderline td-copy-standard" href="" style="margin-right: 30px;">About Us</a>
+										<a class="td-copy-white td-link-nounderline td-copy-standard" href="" style="margin-right: 30px">Site Map</a>
+										<a class="td-copy-white td-link-nounderline td-copy-standard" href="" style="margin-right: 30px">Feedback</a>
+									</div>
+									<div class="td-row td-footer-legal-content" style="margin-top: 20px;">
+										<div class="td-col-xs-12 td-col-sm-10 td-col-sm-offset-1 td-col-md-8 td-col-md-offset-2 td-no-padding">
+											<div class="rte">
+												<p class="td-rte-margin-bottom-small" style="text-align: center;">Copyright © 2019 TD Auto Finance LLC. All rights reserved.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</footer>
+
+				</div>
+			</div>
+		</div>
+	</body>
+	</html>
