@@ -336,24 +336,40 @@ function cycleToNextImage() {
 						</div>
 						<nav>
 							<ul>
-								<li>
-									<a href="">
-										Account Dashboard
+								<li class="td-dropdown" id="tdcustom-dropdownmenu"> <!-- td-dropdown-active -->
+									<a href="#" id="td-desktop-nav-dropdown-link-2">
+										Shop Online                          
+										<span class="td-icon expand" aria-hidden="true"></span><span class="td-icon collapse" aria-hidden="true"></span>
+
 									</a>
+									<ul class="td-dropdown-content" aria-labelledby="td-desktop-nav-dropdown-link-2">
+
+										<li>
+											<a href="">Payment Estimator</a>
+										</li>
+										<li>
+											<a href="">Find a Dealer</a>
+										</li>
+										<li>
+											<a href="">Explore Inventory and Apply for Credit</a>
+										</li>
+									</ul>
 								</li>
 								<li>
 									<a href="">
-										Pay my bill
-									</a>
-								</li>
-								<li>
-									<a href="">
-										Shop online
+										Resources
 									</a>
 								</li>
 								<li>
 								</ul>
 							</nav>
+							<script>
+								$( "#tdcustom-dropdownmenu" ).on('mouseover', function(){
+									$(this).addClass('td-dropdown-active');
+								}).on('mouseout', function(){
+									$(this).removeClass('td-dropdown-active');
+								});
+							</script>
 						</div>
 						<div class="td-section-right">
 							<div class="td-quick-access">
@@ -397,7 +413,7 @@ function cycleToNextImage() {
 										<div id="login-body-content" class="td-col-sm-12 td-col-md-6">
 											<p class="td-banner-header gray"></p>
 											<div class="td-row callout-action">
-												
+
 											</div>   
 										</div>   
 										<div class="hidden-xs hidden-sm td-col-md-6 td-col-md-offset-0 td-col-lg-5 td-col-lg-offset-1"></div>
@@ -412,7 +428,7 @@ function cycleToNextImage() {
 								<div class="td-col td-col-xs-12 td-col-xs-offset-0 td-col-sm-7 td-col-sm-offset-5 td-col-md-8 td-col-md-offset-4">
 									<div class="td-row td-a-banner-callout parallax-banner background-color-white">
 										<div id="login-body-content-cloned" class="td-col-sm-12 td-col-md-6">
-											
+
 										</div>
 										<div class="hidden-xs hidden-sm td-col-md-6 td-col-md-offset-0 td-col-lg-5 td-col-lg-offset-1">
 											<div>
@@ -437,264 +453,264 @@ function cycleToNextImage() {
 													</div>
 												</div>
 
-											<div class="td-row">
-												<div class="td-col-md-10 td-col-md-offset-2 single">
-													<a href="#" class="td-link-action td-small-copy">Forgot Username or Password?</a>
+												<div class="td-row">
+													<div class="td-col-md-10 td-col-md-offset-2 single">
+														<a href="#" class="td-link-action td-small-copy">Forgot Username or Password?</a>
+													</div>
 												</div>
-											</div>
-											<div class="td-row">
-												<div class="td-col-md-10 td-col-md-offset-2 single">
-													<div class="checkbox">
-														<label>
-															<input type="checkbox"> Remember me
-														</label>
+												<div class="td-row">
+													<div class="td-col-md-10 td-col-md-offset-2 single">
+														<div class="checkbox">
+															<label>
+																<input type="checkbox"> Remember me
+															</label>
+														</div>
+													</div>
+												</div>
+												<div class="td-row">
+													<div class="td-col-md-7 td-col-md-offset-2">
+														<button class="td-button td-button-secondary td-button-large td-copy-nowrap loginout" type="button">
+															<span class="td-icon td-icon-secureBtn"></span>Log in
+														</button> 
+													</div>
+													<div class="td-col-md-3">
+														<a title="Sign up for Online Banking" class="td-link-standalone">Sign <span class="td-link-lastword">up<span class="td-icon td-icon-rightCaret"></span></span></a>	
 													</div>
 												</div>
 											</div>
-											<div class="td-row">
-												<div class="td-col-md-7 td-col-md-offset-2">
-													<button class="td-button td-button-secondary td-button-large td-copy-nowrap loginout" type="button">
-														<span class="td-icon td-icon-secureBtn"></span>Log in
-													</button> 
-												</div>
-												<div class="td-col-md-3">
-													<a title="Sign up for Online Banking" class="td-link-standalone">Sign <span class="td-link-lastword">up<span class="td-icon td-icon-rightCaret"></span></span></a>	
-												</div>
-											</div>
 										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<section class="td-main-header" style="margin-top: 30px;margin-bottom: 20px;">
+						<div class="td-container">
+							<div aria-live="assertive" class="td-col td-col-xs-12 td-col-sm-10 td-col-sm-offset-1">
+								<h1>Welcome to TD Auto Finance</h1>
+							</div>
+						</div>
+					</section>
+					<section class="td-divider">
+						<div class="td-container">
+							<div class="td-sm-full-bleed">
+								<div class="td-row">
+									<div class="td-col-xs-12">
+										<hr class="td-thin-divider-line-1">
 									</div>
 								</div>
 							</div>
 						</div>
 					</section>
-				</div>
-				<section class="td-main-header" style="margin-top: 30px;margin-bottom: 20px;">
-					<div class="td-container">
-						<div aria-live="assertive" class="td-col td-col-xs-12 td-col-sm-10 td-col-sm-offset-1">
-							<h1>Welcome to TD Auto Finance</h1>
-						</div>
-					</div>
-				</section>
-				<section class="td-divider">
-					<div class="td-container">
-						<div class="td-sm-full-bleed">
-							<div class="td-row">
+					<section class="td_rq_tabs-carousel td-product-service-icon-links " style="opacity: 1;margin-bottom: 30px; margin-top: 20px;">
+						<div class="td-container">
+							<div class="td-row" style="margin-bottom: 10px;">
 								<div class="td-col-xs-12">
-									<hr class="td-thin-divider-line-1">
+
+									<h2>Explore TD Auto Finance products and services</h2>
+
 								</div>
 							</div>
 						</div>
-					</div>
-				</section>
-				<section class="td_rq_tabs-carousel td-product-service-icon-links " style="opacity: 1;margin-bottom: 30px; margin-top: 20px;">
-					<div class="td-container">
-						<div class="td-row" style="margin-bottom: 10px;">
-							<div class="td-col-xs-12">
+						<div class="td-tabs-carousel-container hidden-xs td-row">
+							<div class="td-col-sm-12">
+								<ul class="td-tabs-carousel td-tabs-carousel-icons slick-initialized slick-slider">
+									<button type="button" class="slick-prev slick-arrow slick-disabled" style="display: inline-block;" tabindex="-1" >
+										<span class="td-icon td-icon-arrowLeft"></span>
+									</button>
+									<div aria-live="polite" class="slick-list" id="drag-id-tabsCarousel0">
+										<div class="slick-track" style="opacity: 1; width: 1099px; transform: translate(0px, 0px); perspective: 1000px; backface-visibility: hidden;">
+											<li class="td-tabs-carousel-tab td-tabs-carousel-tab-no-borders slick-slide slick-current slick-active" style="width: 200px; height: 127px;" tabindex="0">
+												<div class="td-tabs-carousel-tab-content icon-link">
+													<span class="td-icon-wrapper td-interactive-icon td-height-85 td-width-85">
+														<span class="td-icon td-icon-search td-icon-sm-center td-icon-md-center"></span>
+													</span>
 
-								<h2>Explore TD Auto Finance products and services</h2>
+													<p>Find a Dealer</p>
 
-							</div>
-						</div>
-					</div>
-					<div class="td-tabs-carousel-container hidden-xs td-row">
-						<div class="td-col-sm-12">
-							<ul class="td-tabs-carousel td-tabs-carousel-icons slick-initialized slick-slider">
-								<button type="button" class="slick-prev slick-arrow slick-disabled" style="display: inline-block;" tabindex="-1" >
-									<span class="td-icon td-icon-arrowLeft"></span>
-								</button>
-								<div aria-live="polite" class="slick-list" id="drag-id-tabsCarousel0">
-									<div class="slick-track" style="opacity: 1; width: 1099px; transform: translate(0px, 0px); perspective: 1000px; backface-visibility: hidden;">
-										<li class="td-tabs-carousel-tab td-tabs-carousel-tab-no-borders slick-slide slick-current slick-active" style="width: 200px; height: 127px;" tabindex="0">
-											<div class="td-tabs-carousel-tab-content icon-link">
-												<span class="td-icon-wrapper td-interactive-icon td-height-85 td-width-85">
-													<span class="td-icon td-icon-search td-icon-sm-center td-icon-md-center"></span>
-												</span>
-
-												<p>Find a Dealer</p>
-
-											</div>
-											<div class="separator">
-
-											</div>
-										</li>
-										<li class="td-tabs-carousel-tab td-tabs-carousel-tab-no-borders slick-slide slick-active" style="width: 200px; height: 127px;"  tabindex="0">
-											<div class="td-tabs-carousel-tab-content icon-link">
-												<span class="td-icon-wrapper td-interactive-icon td-height-85 td-width-85">
-
-													<span class="td-icon td-icon-dashboard td-icon-sm-center td-icon-md-center" aria-hidden="true"></span>
-
-												</span>
-
-												<p>Payment Estimator</p>
-
-											</div>
-											<div class="separator">
-
-											</div>
-										</li>
-										<li class="td-tabs-carousel-tab td-tabs-carousel-tab-no-borders slick-slide slick-active" style="width: 200px; height: 127px;" tabindex="0">
-											<div class="td-tabs-carousel-tab-content icon-link">
-												<span class="td-icon-wrapper td-interactive-icon td-height-85 td-width-85">
-
-													<span class="td-icon td-icon-creditcards td-icon-sm-center td-icon-md-center" aria-hidden="true"></span>
-
-												</span>
-
-												<p>Explore Vehicles & Apply for Credit</p>
-
-											</div>
-											<div class="separator">
-
-											</div>
-										</li>
-										<li class="td-tabs-carousel-tab td-tabs-carousel-tab-no-borders slick-slide slick-active" style="width: 200px; height: 127px;" tabindex="0">
-											<div class="td-tabs-carousel-tab-content icon-link">
-												<span class="td-icon-wrapper td-interactive-icon td-height-85 td-width-85">
-
-													<span class="td-icon td-icon-tools td-icon-sm-center td-icon-md-center"></span>
-
-												</span>
-
-												<p>Resources</p>
-
-											</div>
-											<div class="separator">
-
-											</div>
-										</li>
-
-									</div>
-								</div>
-							</ul>
-						</div>
-					</div>
-				</section>
-				<section class="td-divider">
-					<div class="td-row">
-						<div class="td-col-xs-12">
-							<hr class="td-thick-divider-line">
-						</div>
-					</div>
-
-				</section>
-				<section class="td_rq_blocks td-fixed-grid-block-3-column " style="margin-top: 40px;margin-bottom: 20px;">
-					<div class="td-container">
-						<div class="td-row td-3-column-grid-blocks">
-							<div class="td-col-md-12" id="grid-blocks">
-								<div class="td-row slick-content" id="slick-content">
-									<div class="td-col-sm-4" style="">
-										<div class="td-row">
-											<div class="td-extend-left td-extend-right 3-column-grid">	
-												<div class="tdaf-figure">
-													<img src="img/img-b.jpg" alt="Earn up to $300" style="width: 99.5%;">
-													<div class="tdaf-figcaptionHover">
-														<h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h3>
-														<p>Get Started</p>
-														<span class="td-icon-wrapper-white td-interactive-icon overlay-close margin-top-20">
-															<span class="td-icon td-icon-rightCaret">
-															</span>
-														</span>
-													</div>
-													<div class="tdaf-figcaptionBottom" style="font-size: 20px;">Apply for TD Bank Account
-													</div>
-												</div>                                                                                                  
-											</div>
-										</div>
-									</div>
-									<div class="td-col-sm-4" style="">
-										<div class="td-row">
-											<div class="td-extend-left td-extend-right 3-column-grid">	
-												<div class="tdaf-figure">
-													<img src="img/img-a.jpg" alt="Earn up to $300" style="width: 99.5%;">
-													<div class="tdaf-figcaptionHover">
-														<h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h3>
-														<p>Get Started</p>
-														<span class="td-icon-wrapper-white td-interactive-icon overlay-close margin-top-20">
-															<span class="td-icon td-icon-rightCaret">
-															</span>
-														</span>
-													</div>
-													<div class="tdaf-figcaptionBottom" style="font-size: 20px;">Apply for TD Bank Credit card
-													</div>
 												</div>
-											</div>
-										</div>
-									</div>
-									<div class="td-col-sm-4" style="">
-										<div class="td-row">
-											<div class="td-extend-left td-extend-right 3-column-grid">	
-												<div class="tdaf-figure">
-													<img src="img/img-c.jpg" alt="Earn up to $300" style="width: 99.5%;">
-													<div class="tdaf-figcaptionHover">
-														<h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h3>
-														<p>Get Started</p>
-														<span class="td-icon-wrapper-white td-interactive-icon overlay-close margin-top-20">
-															<span class="td-icon td-icon-rightCaret">
-															</span>
-														</span>
-													</div>
-													<div class="tdaf-figcaptionBottom" style="font-size: 20px;">About TD Bank
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+												<div class="separator">
 
+												</div>
+											</li>
+											<li class="td-tabs-carousel-tab td-tabs-carousel-tab-no-borders slick-slide slick-active" style="width: 200px; height: 127px;"  tabindex="0">
+												<div class="td-tabs-carousel-tab-content icon-link">
+													<span class="td-icon-wrapper td-interactive-icon td-height-85 td-width-85">
+
+														<span class="td-icon td-icon-dashboard td-icon-sm-center td-icon-md-center" aria-hidden="true"></span>
+
+													</span>
+
+													<p>Payment Estimator</p>
+
+												</div>
+												<div class="separator">
+
+												</div>
+											</li>
+											<li class="td-tabs-carousel-tab td-tabs-carousel-tab-no-borders slick-slide slick-active" style="width: 200px; height: 127px;" tabindex="0">
+												<div class="td-tabs-carousel-tab-content icon-link">
+													<span class="td-icon-wrapper td-interactive-icon td-height-85 td-width-85">
+
+														<span class="td-icon td-icon-creditcards td-icon-sm-center td-icon-md-center" aria-hidden="true"></span>
+
+													</span>
+
+													<p>Explore Vehicles & Apply for Credit</p>
+
+												</div>
+												<div class="separator">
+
+												</div>
+											</li>
+											<li class="td-tabs-carousel-tab td-tabs-carousel-tab-no-borders slick-slide slick-active" style="width: 200px; height: 127px;" tabindex="0">
+												<div class="td-tabs-carousel-tab-content icon-link">
+													<span class="td-icon-wrapper td-interactive-icon td-height-85 td-width-85">
+
+														<span class="td-icon td-icon-tools td-icon-sm-center td-icon-md-center"></span>
+
+													</span>
+
+													<p>Resources</p>
+
+												</div>
+												<div class="separator">
+
+												</div>
+											</li>
+
+										</div>
+									</div>
+								</ul>
 							</div>
 						</div>
-					</div>
-				</section>
-				<a href="javascript:void(0);" class="td_rq_link-to-top activate" tabindex="0" onclick="topFunction(document.documentElement, 0, 200)" id="tdaf-myBtn">
-					<span class="left">
-						<span class="td-forscreenreader">back to top</span>
-						<span class="td-icon td-icon-upCaret td-copy-green icon-small"tabindex="-1">
-						</span>
-						<span class="text" aria-hidden="true" tabindex="-1">Top</span>
-					</span>
-					<span class="right" aria-hidden="true"></span>
-				</a>
-				<footer role="contentinfo" class="td-fullwidth-dark-green td-padding-vert-0">
-					<div class="td-container">
+					</section>
+					<section class="td-divider">
 						<div class="td-row">
-							<div class="td-footer-content td-col-xs-12 td-footer-no-background-img">
-								<p class="td-footer-heading td-copy-white td-copy-align-centre">
-									Need to talk to us directly?
-									<a href="" class="td-contact-link td-link-nounderline td-link-standalone">
-										Contact 
-										<span class="td-link-lastword">
-											us
-											<span class="td-icon td-icon-rightCaret" aria-hidden="true"></span>
-										</span>
-									</a>
-								</p>
-								<div class="td-footer-social td-copy-align-centre">
-									<p class="td-footer-social-heading">Call now 1-800-556-8172</p>
+							<div class="td-col-xs-12">
+								<hr class="td-thick-divider-line">
+							</div>
+						</div>
+
+					</section>
+					<section class="td_rq_blocks td-fixed-grid-block-3-column " style="margin-top: 40px;margin-bottom: 20px;">
+						<div class="td-container">
+							<div class="td-row td-3-column-grid-blocks">
+								<div class="td-col-md-12" id="grid-blocks">
+									<div class="td-row slick-content" id="slick-content">
+										<div class="td-col-sm-4" style="">
+											<div class="td-row">
+												<div class="td-extend-left td-extend-right 3-column-grid">	
+													<div class="tdaf-figure">
+														<img src="img/img-b.jpg" alt="Earn up to $300" style="width: 99.5%;">
+														<div class="tdaf-figcaptionHover">
+															<h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h3>
+															<p>Get Started</p>
+															<span class="td-icon-wrapper-white td-interactive-icon overlay-close margin-top-20">
+																<span class="td-icon td-icon-rightCaret">
+																</span>
+															</span>
+														</div>
+														<div class="tdaf-figcaptionBottom" style="font-size: 20px;">Apply for TD Bank Account
+														</div>
+													</div>                                                                                                  
+												</div>
+											</div>
+										</div>
+										<div class="td-col-sm-4" style="">
+											<div class="td-row">
+												<div class="td-extend-left td-extend-right 3-column-grid">	
+													<div class="tdaf-figure">
+														<img src="img/img-a.jpg" alt="Earn up to $300" style="width: 99.5%;">
+														<div class="tdaf-figcaptionHover">
+															<h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h3>
+															<p>Get Started</p>
+															<span class="td-icon-wrapper-white td-interactive-icon overlay-close margin-top-20">
+																<span class="td-icon td-icon-rightCaret">
+																</span>
+															</span>
+														</div>
+														<div class="tdaf-figcaptionBottom" style="font-size: 20px;">Apply for TD Bank Credit card
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="td-col-sm-4" style="">
+											<div class="td-row">
+												<div class="td-extend-left td-extend-right 3-column-grid">	
+													<div class="tdaf-figure">
+														<img src="img/img-c.jpg" alt="Earn up to $300" style="width: 99.5%;">
+														<div class="tdaf-figcaptionHover">
+															<h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h3>
+															<p>Get Started</p>
+															<span class="td-icon-wrapper-white td-interactive-icon overlay-close margin-top-20">
+																<span class="td-icon td-icon-rightCaret">
+																</span>
+															</span>
+														</div>
+														<div class="tdaf-figcaptionBottom" style="font-size: 20px;">About TD Bank
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
 								</div>
-								<div class="td-footer-links td-copy-align-centre td-copy-white">
-									<a class="td-copy-white td-link-nounderline td-copy-standard" href="" style="margin-right: 30px;">Privacy</a>
-									<a class="td-copy-white td-link-nounderline td-copy-standard" href="" style="margin-right: 30px;">Terms of Use</a>
-									<a class="td-copy-white td-link-nounderline td-copy-standard" href="" style="margin-right: 30px;">Accessibility</a>
-									<a class="td-copy-white td-link-nounderline td-copy-standard" href="" style="margin-right: 30px;">About Us</a>
-									<a class="td-copy-white td-link-nounderline td-copy-standard" href="" style="margin-right: 30px">Site Map</a>
-									<a class="td-copy-white td-link-nounderline td-copy-standard" href="" style="margin-right: 30px">Feedback</a>
-								</div>
-								<div class="td-row td-footer-legal-content" style="margin-top: 20px;">
-									<div class="td-col-xs-12 td-col-sm-10 td-col-sm-offset-1 td-col-md-8 td-col-md-offset-2 td-no-padding">
-										<div class="rte">
-											<p class="td-rte-margin-bottom-small" style="text-align: center;">Copyright © 2019 TD Auto Finance LLC. All rights reserved.</p>
+							</div>
+						</div>
+					</section>
+					<a href="javascript:void(0);" class="td_rq_link-to-top activate" tabindex="0" onclick="topFunction(document.documentElement, 0, 200)" id="tdaf-myBtn">
+						<span class="left">
+							<span class="td-forscreenreader">back to top</span>
+							<span class="td-icon td-icon-upCaret td-copy-green icon-small"tabindex="-1">
+							</span>
+							<span class="text" aria-hidden="true" tabindex="-1">Top</span>
+						</span>
+						<span class="right" aria-hidden="true"></span>
+					</a>
+					<footer role="contentinfo" class="td-fullwidth-dark-green td-padding-vert-0">
+						<div class="td-container">
+							<div class="td-row">
+								<div class="td-footer-content td-col-xs-12 td-footer-no-background-img">
+									<p class="td-footer-heading td-copy-white td-copy-align-centre">
+										Need to talk to us directly?
+										<a href="" class="td-contact-link td-link-nounderline td-link-standalone">
+											Contact 
+											<span class="td-link-lastword">
+												us
+												<span class="td-icon td-icon-rightCaret" aria-hidden="true"></span>
+											</span>
+										</a>
+									</p>
+									<div class="td-footer-social td-copy-align-centre">
+										<p class="td-footer-social-heading">Call now 1-800-556-8172</p>
+									</div>
+									<div class="td-footer-links td-copy-align-centre td-copy-white">
+										<a class="td-copy-white td-link-nounderline td-copy-standard" href="" style="margin-right: 30px;">Privacy</a>
+										<a class="td-copy-white td-link-nounderline td-copy-standard" href="" style="margin-right: 30px;">Terms of Use</a>
+										<a class="td-copy-white td-link-nounderline td-copy-standard" href="" style="margin-right: 30px;">Accessibility</a>
+										<a class="td-copy-white td-link-nounderline td-copy-standard" href="" style="margin-right: 30px;">About Us</a>
+										<a class="td-copy-white td-link-nounderline td-copy-standard" href="" style="margin-right: 30px">Site Map</a>
+										<a class="td-copy-white td-link-nounderline td-copy-standard" href="" style="margin-right: 30px">Feedback</a>
+									</div>
+									<div class="td-row td-footer-legal-content" style="margin-top: 20px;">
+										<div class="td-col-xs-12 td-col-sm-10 td-col-sm-offset-1 td-col-md-8 td-col-md-offset-2 td-no-padding">
+											<div class="rte">
+												<p class="td-rte-margin-bottom-small" style="text-align: center;">Copyright © 2019 TD Auto Finance LLC. All rights reserved.</p>
+											</div>
 										</div>
 									</div>
 								</div>
+
 							</div>
 
 						</div>
+					</footer>
 
-					</div>
-				</footer>
-
+				</div>
 			</div>
 		</div>
-	</div>
-</body>
-</html>
+	</body>
+	</html>

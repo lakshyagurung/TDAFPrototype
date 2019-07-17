@@ -288,21 +288,75 @@ crossorigin="anonymous"></script>
 							<ul>
 								<li>
 									<a href="">
-										Account Dashboard
+										Dashboard
 									</a>
+								</li>
+								<li class="td-dropdown" id="tdcustom-dropdownmenu"> <!-- td-dropdown-active -->
+									<a href="#" id="td-desktop-nav-dropdown-link-2">
+										Payments                       
+										<span class="td-icon expand" aria-hidden="true"></span><span class="td-icon collapse" aria-hidden="true"></span>
+
+									</a>
+									<ul class="td-dropdown-content" aria-labelledby="td-desktop-nav-dropdown-link-2">
+
+										<li>
+											<a href="">Make a Payment</a>
+										</li>
+										<li>
+											<a href="">Payment History</a>
+										</li>
+										<li>
+											<a href="">Auto-Pay Profile</a>
+										</li>
+										<li>
+											<a href="">Due date Change</a>
+										</li>
+										<li>
+											<a href="">Extention</a>
+										</li>
+										<li>
+											<a href="">Payoff Quote</a>
+										</li>
+									</ul>
+								</li>
+								<li class="td-dropdown" id="tdcustom-dropdownmenu1"> <!-- td-dropdown-active -->
+									<a href="#" id="td-desktop-nav-dropdown-link-2">
+										Shop Online                          
+										<span class="td-icon expand" aria-hidden="true"></span><span class="td-icon collapse" aria-hidden="true"></span>
+
+									</a>
+									<ul class="td-dropdown-content" aria-labelledby="td-desktop-nav-dropdown-link-2">
+
+										<li>
+											<a href="">Payment Estimator</a>
+										</li>
+										<li>
+											<a href="">Find a Dealer</a>
+										</li>
+										<li>
+											<a href="">Explore Inventory & Apply for Credit</a>
+										</li>
+									</ul>
 								</li>
 								<li>
 									<a href="">
-										Pay my bill
+										Resources
 									</a>
 								</li>
-								<li>
-									<a href="">
-										Shop online
-									</a>
-								</li>
-								<li>
 								</ul>
+								<script>
+									$( "#tdcustom-dropdownmenu" ).on('mouseover', function(){
+										$(this).addClass('td-dropdown-active');
+									}).on('mouseout', function(){
+										$(this).removeClass('td-dropdown-active');
+									});
+
+									$( "#tdcustom-dropdownmenu1" ).on('mouseover', function(){
+										$(this).addClass('td-dropdown-active');
+									}).on('mouseout', function(){
+										$(this).removeClass('td-dropdown-active');
+									});
+								</script>
 							</nav>
 						</div>
 						<div class="td-section-right">
@@ -328,7 +382,7 @@ crossorigin="anonymous"></script>
 									<li class="login td-us-public-login td-dropdown" id="listClassAddSecond" onclick="dropdownSecond()">
 										<a href="javascript:void(0);" class="td-show-label">
 											<span class="td-icon"></span>
-											<span class="td-label">Sarah Doe</span>
+											<span class="td-label">Sarah</span>
 											<span class="td-icon expand" aria-hidden="true"></span>
 											<span class="td-icon collapse" aria-hidden="true"></span>
 										</a>
