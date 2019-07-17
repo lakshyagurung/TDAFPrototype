@@ -2,7 +2,7 @@
 
 .tdcustom-container {
   margin: 0 auto;
-  width: 400px;
+  width: 26%;
   border-radius: 5px;
   position: fixed;
   bottom: 95px;
@@ -11,7 +11,7 @@
 }
 
 .chat {
-  width: 400px;
+  width: 100%;
   float:left;
   background: #f3f3f8;
   border: 1px solid #008a00;
@@ -46,7 +46,7 @@
   padding: 10px 10px 5px;
   border-bottom: 2px solid white;
   overflow-y: scroll;
-  height: 260px;
+  height: 30vh;
 }
 .chat-history ul{
   list-style: none;
