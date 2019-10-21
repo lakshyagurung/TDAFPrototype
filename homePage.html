@@ -316,6 +316,16 @@ function cycleToNextImage() {
 										</li>
 
 									</ul>
+									<script>										
+										$(document).click(function(){
+										  $("#tdid-dropdown-content").hide();
+										  $("#listClassAdd").removeClass("td-dropdown-active");
+										});
+
+										$("#listClassAdd").click(function(e){
+										  e.stopPropagation();
+										});
+									</script>
 								</li>
 
 								<li class="td-dropdown td-dropdown-language td-dropdown-no-hover">

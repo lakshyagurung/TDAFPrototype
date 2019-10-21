@@ -266,6 +266,16 @@ crossorigin="anonymous"></script>
 										</li>
 
 									</ul>
+									<script>										
+										$(document).click(function(){
+										  $("#tdid-dropdown-content").hide();
+										  $("#listClassAdd").removeClass("td-dropdown-active");
+										});
+
+										$("#listClassAdd").click(function(e){
+										  e.stopPropagation();
+										});
+									</script>
 								</li>
 
 								<li class="td-dropdown td-dropdown-language td-dropdown-no-hover">
@@ -396,6 +406,16 @@ crossorigin="anonymous"></script>
 												<a href="">Logout</a>
 											</li>
 										</ul>
+										<script>										
+										$(document).click(function(){
+										  $("#tdid-dropdown-content-second").hide();
+										  $("#listClassAddSecond").removeClass("td-dropdown-active");
+										});
+
+										$("#listClassAddSecond").click(function(e){
+										  e.stopPropagation();
+										});
+									</script>
 									</li>
 									<li class="email">
 										<a href="#" class="td-show-label">
